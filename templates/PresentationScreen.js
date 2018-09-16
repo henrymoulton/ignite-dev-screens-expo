@@ -12,6 +12,7 @@ import FaqScreen from './FaqScreen'
 
 // Styles
 import styles from './Styles/PresentationScreenStyles'
+import DeviceInfoScreen from "./DeviceInfoScreen";
 
 class PresentationScreen extends React.Component {
   openComponents = () => {
@@ -32,6 +33,10 @@ class PresentationScreen extends React.Component {
 
   openFaq = () => {
     this.props.navigation.navigate('FaqScreen')
+  }
+
+  openDeviceInfo = () => {
+    this.props.navigation.navigate('DeviceInfoScreen')
   }
 
   render () {
@@ -64,8 +69,8 @@ class PresentationScreen extends React.Component {
             <ButtonBox onPress={this.openTheme} image={Images.theme} text='Theme' />
           </View>
           <View style={styles.buttonsContainer}>
-            <ButtonBox style={styles.deviceButton} image={Images.deviceInfo} text='Device Info N/A' />
             <ButtonBox onPress={this.openFaq} style={styles.usageButton} image={Images.faq} text='FAQ' />
+            <ButtonBox onPress={this.openDeviceInfo} style={styles.deviceButton} image={Images.deviceInfo} text='Device Info N/A' />
           </View>
         </ScrollView>
         <View style={styles.banner}>
@@ -82,7 +87,8 @@ export default createStackNavigator({
   ComponentExamplesScreen: {screen: ComponentExamplesScreen},
   PluginExamplesScreen: {screen: PluginExamplesScreen},
   ThemeScreen: {screen: ThemeScreen},
-  FaqScreen: {screen: FaqScreen}
+  FaqScreen: {screen: FaqScreen},
+  DeviceInfoScreen: {screen: DeviceInfoScreen}
 }, {
   cardStyle: {
     opacity: 1,
