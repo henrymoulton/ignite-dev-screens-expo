@@ -22,7 +22,7 @@ const add = async function (context) {
   ignite.addAndroidPermission('ACCESS_NETWORK_STATE')
 
   // dev screens use react-navigation
-  await ignite.addModule('react-navigation', { version: '1.0.0-beta.11' })
+  await ignite.addModule('react-navigation', { version: '^2.13.0' })
 
   // add prop types
   await ignite.addModule('prop-types', { version: '15.6.0' })
