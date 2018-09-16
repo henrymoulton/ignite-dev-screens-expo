@@ -70,7 +70,7 @@ class PresentationScreen extends React.Component {
           </View>
           <View style={styles.buttonsContainer}>
             <ButtonBox onPress={this.openFaq} style={styles.usageButton} image={Images.faq} text='FAQ' />
-            <ButtonBox onPress={this.openDeviceInfo} style={styles.deviceButton} image={Images.deviceInfo} text='Device Info N/A' />
+            <ButtonBox onPress={this.openDeviceInfo} style={styles.deviceButton} image={Images.deviceInfo} text='Device Info' />
           </View>
         </ScrollView>
         <View style={styles.banner}>
